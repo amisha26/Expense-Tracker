@@ -1,4 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react';
+st initialState = {
+  amount: '',
+  category: '',
+  type: 'Income',
+  date: formatDate(new Date()),
+};
 
 const NewTransactionForm = () => {
  
