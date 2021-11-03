@@ -43,7 +43,14 @@ const NewTransactionForm = () => {
         </FormControl>
       </Grid>
 
-      
+      <Grid item xs={6}>
+        <TextField type="number" label="Amount" value={formData.amount} onChange={(e) => setFormData({ ...formData, amount: e.target.value })} fullWidth />
+      </Grid>
+      <Grid item xs={6}>
+        <TextField fullWidth label="Date" type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: formatDate(e.target.value) })} />
+      </Grid>
+      <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction}>Create</Button>
+    </Grid>
   );
 };
 
