@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 
 
 const List = () => {
+  const classes = useStyles();
+  const { transactions, deleteTransaction } = useContext(ExpenseTrackerContext);
 
   return (
     <MUIList dense={false} className={classes.list}>
