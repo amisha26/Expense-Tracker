@@ -8,7 +8,8 @@ const ExpenseTracker = () => {
       <CardContent>
         <Typography align="center" variant="h5">Total Balance Rs {balance}</Typography>
       
-   
+        <Divider className={classes.divider} />
+        <Form />
       </CardContent>
     
     </Card>
