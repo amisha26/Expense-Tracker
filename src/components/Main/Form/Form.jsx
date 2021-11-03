@@ -3,7 +3,8 @@ import React, { useState, useContext, useEffect } from 'react';
 const NewTransactionForm = () => {
  
   const createTransaction = () => {
-  
+    if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
+
     if (incomeCategories.map((iC) => iC.type).includes(formData.category)) {
       setFormData({ ...formData, type: 'Income' });
     } else if (expenseCategories.map((iC) => iC.type).includes(formData.category)) {
