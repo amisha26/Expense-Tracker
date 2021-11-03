@@ -9,7 +9,12 @@ const List = () => {
         <Slide direction="down" in mountOnEnter unmountOnExit key={transaction.id}>
           <ListItem>
             
-            
+            <ListItemSecondaryAction>
+              <IconButton edge="end" aria-label="delete" onClick={() => deleteTransaction(transaction.id)}>
+                <Delete />
+              </IconButton>
+            </ListItemSecondaryAction>
+          </ListItem>
         </Slide>
       ))}
     </MUIList>
