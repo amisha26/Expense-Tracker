@@ -4,7 +4,16 @@ const NewTransactionForm = () => {
  
   const createTransaction = () => {
   
-    
+    if (incomeCategories.map((iC) => iC.type).includes(formData.category)) {
+      setFormData({ ...formData, type: 'Income' });
+    } else if (expenseCategories.map((iC) => iC.type).includes(formData.category)) {
+      setFormData({ ...formData, type: 'Expense' });
+    }
+
+    setOpen(true);
+    addTransaction({ ...formData, amount: Number(formData.amount), id: uuidv4() });
+    setFormData(initialState);
+  };
 
   useEffect(() => {
     if (segment) {
