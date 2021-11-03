@@ -8,7 +8,10 @@ const List = () => {
       {transactions.map((transaction) => (
         <Slide direction="down" in mountOnEnter unmountOnExit key={transaction.id}>
           <ListItem>
+            <ListItemAvatar>
             
+            </ListItemAvatar>
+            <ListItemText primary={transaction.category} secondary={`Rs${transaction.amount} - ${transaction.date}`} />
             <ListItemSecondaryAction>
               <IconButton edge="end" aria-label="delete" onClick={() => deleteTransaction(transaction.id)}>
                 <Delete />
