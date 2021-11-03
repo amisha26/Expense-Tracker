@@ -10,7 +10,13 @@ const NewTransactionForm = () => {
 
       
 
-    
+      if (segment.isFinal && formData.amount && formData.category && formData.type && formData.date) {
+        createTransaction();
+      }
+    }
+  }, [segment]);
+
+  const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories;
 
   return (
     <Grid container spacing={2}>
