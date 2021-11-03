@@ -8,7 +8,27 @@ const NewTransactionForm = () => {
 
   
 
-      
+      segment.entities.forEach((s) => {
+        const category = `${s.value.charAt(0)}${s.value.slice(1).toLowerCase()}`;
+
+        switch (s.type) {
+          case 'amount':
+            setFormData({ ...formData, amount: s.value });
+            break;
+          case 'category':
+            if (incomeCategories.map((iC) => iC.type).includes(category)) {
+              setFormData({ ...formData, type: 'Income', category });
+            } else if (expenseCategories.map((iC) => iC.type).includes(category)) {
+              setFormData({ ...formData, type: 'Expense', category });
+            }
+            break;
+          case 'date':
+            setFormData({ ...formData, date: s.value });
+            break;
+          default:
+            break;
+        }
+      });
 
       if (segment.isFinal && formData.amount && formData.category && formData.type && formData.date) {
         createTransaction();
