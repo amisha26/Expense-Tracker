@@ -4,7 +4,11 @@
 
 ## About
 
-To build a Complex Expense Budget Tracker. While building it, you're going to learn many advanced React & JavaScript topics. Some of them are State Management in React, Context API, Local Storage, Material UI, and how to create a scalable React folder structure. But most importantly, you're going to learn how to add voice capabilities to your applications using Speechly.
+A Complex Expense Budget Tracker. 
+
+## Learnings from the project
+
+While building it, one can learn many advanced React & JavaScript topics. Some of them are State Management in React, Context API, Local Storage, Material UI, and how to create a scalable React folder structure, but most importantly, how to add voice capabilities to the application using Speechly.
 
 
 ### Setup
